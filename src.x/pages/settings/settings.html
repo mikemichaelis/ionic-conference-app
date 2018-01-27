@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{ 'settings.title' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-item-group>
+        <ion-item-divider class="divider">{{ 'settings.general' | translate }}</ion-item-divider>
+        <ion-item>
+            <ion-label>
+                <ion-icon item-left name="camera" color="primary"></ion-icon>
+                {{ 'settings.select-profile' | translate}}
+            </ion-label>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label>
+                <ion-icon item-left name="key" color="primary"></ion-icon>
+                Change Password
+            </ion-label>
+        </ion-item> -->
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider class="divider">{{ 'settings.notifications' | translate }}</ion-item-divider>
+        <ion-item>
+            <ion-label>
+                <ion-icon item-left name="notifications" color="primary"></ion-icon>
+                {{'settings.allow-push' | translate }}
+            </ion-label>
+            <ion-toggle color="secondary" [(ngModel)]="push-notification"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon item-left name="musical-note" color="primary"></ion-icon>
+                {{'settings.play-sound' | translate }}
+            </ion-label>
+            <ion-toggle color="secondary" [(ngModel)]="events"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <button ion-button (click)="clearData()"><span>{{ 'settings.clear-local-data' | translate }}</span></button>
+        </ion-item>
+    </ion-item-group>
+</ion-content>

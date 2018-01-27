@@ -1,0 +1,5 @@
+.divider{
+  background: map-get($colors, light);
+  color: map-get($colors, primary);
+  font-variant: small-caps;
+}

@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Couples Satisfaction Index</ion-title>
+        <!-- <ion-buttons end class="all-buttons">
+            <button ion-button clear (click)="openNotifications()">
+                <ion-icon name="notifications">
+                    <ion-badge class="badging">5</ion-badge>
+                </ion-icon>
+            </button>
+            <button ion-button clear (click)="search()">
+                <ion-icon name="search"></ion-icon>
+            </button>
+            <button ion-button clear (click)="viewMyProfile()">
+                <ion-icon name="person"></ion-icon>
+            </button>
+        </ion-buttons> -->
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content #content>
+    <!-- <form [formGroup]="answers" (ngSubmit)="onComplete()"> -->
+        <ion-card *ngFor="let q of questions; let i = index">
+
+            <ion-card-header>
+                {{q.title}}
+            </ion-card-header>
+            <ion-card-content>
+                <h2>{{q.text}}</h2>
+                <br>
+                <span class="center_span">{{answers.abc}}</span>
+                    <ng-container *ngIf="q.type === 'button'">
+                        <ion-list radio-group [id]="i">
+                            <ng-template ngFor let-answer [ngForOf]="q.answers" let-x="index">
+                                <ion-item>
+                                    <ion-label>{{answer}}</ion-label>
+
+                                    <ion-radio checked="false" value="{{q.values[x]}}" (ionSelect)="ionSelect(i, q.values[x])"></ion-radio>
+                                </ion-item>
+                            </ng-template>
+                        </ion-list>
+
+                    </ng-container>
+
+                    <ng-container *ngIf="q.type === 'slider'">
+                        <div [id]="i">
+                            <span class="center_span">{{q.max_label}}</span>
+                            <span class="center_span">
+                                    <!-- -->
+                                    <!-- [(ngModel)]="answers[i]" -->
+                                <input type="range" class="range" min="{{q.min}}" max="{{q.max}}" step=".1" name="i" [value]="" (input)="ionSelect(i, $event.target.value)"/>
+                            </span>
+                            <span class="center_span">{{q.min_label}}</span>
+                        </div>
+                    </ng-container>
+
+
+                    <!-- <ion-range *ngIf="q.type == 'slider'" min="q.min" max="q.max" [(ngModel)]="answers[i]">
+                        <span>{{q.min_label}}</span>
+                        <span>{{q.max_label}}</span>
+                    </ion-range> -->
+            </ion-card-content>
+
+            <!-- <ion-fab bottom right edge (click)="scrollTo(i + 1)">
+                <button ion-fab mini><ion-icon name="next"></ion-icon></button>
+            </ion-fab> -->
+        </ion-card>
+
+        <button ion-button class="complete" (click)="onComplete()">Complete CSI</button>
+
+    <!-- </form> -->
+
+</ion-content>
+
+
+<ion-footer>
+</ion-footer>

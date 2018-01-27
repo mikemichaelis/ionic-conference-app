@@ -1,0 +1,74 @@
+$font-size: 1.4rem;
+$line-height: 1.5;
+$lines-to-show: 3;
+
+.timeline-header{
+  padding:0;
+  .username{
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+  .timing{
+    font-size: 0.75em;
+    color: darken(map-get($colors, myFont), 45);
+  }
+  .like-icon{
+    color: map-get($colors, primary);
+    float: right;
+  }
+}
+.timeline-content{
+  padding-bottom: 0;
+  p{
+   /*  To include text ellipsis
+    display: block;
+    display: -webkit-box; !* Fallback for non-webkit *!
+    max-height: $font-size * $line-height * $lines-to-show;
+    margin: 0 auto;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    */
+    position: relative;
+    height: $font-size * $line-height * $lines-to-show;
+    overflow: hidden;
+    text-align: justify;
+    &:after{
+      content: "";
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 20%;
+      height: 1.2em;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.82) 50%);
+    }
+  }
+
+  img + p {
+    margin-top: 0.5em;
+  }
+  /*.img-loaded + ion-spinner {
+    display:none;
+  }
+  ion-spinner{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }*/
+}
+.timeline-footer{
+  padding: 0;
+  ion-col{
+    padding:0;
+    button{
+      text-transform: capitalize;
+      ion-icon{
+        margin-right: 7px;
+      }
+    }
+  }
+}

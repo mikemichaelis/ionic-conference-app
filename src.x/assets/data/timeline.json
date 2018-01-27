@@ -1,0 +1,184 @@
+{
+  "timelines": [
+    {
+      "id": "1",
+      "username": "Tinker Bell",
+      "avatar": "assets/img/avatar/TinkerBell.jpg",
+      "post_image": "assets/img/posts/post1.jpg",
+      "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "likes": 12,
+      "noOfComments": "3",
+      "comments": [
+        {
+          "commentor": "Elsa",
+          "comment_avatar": "assets/img/avatar/Elsa.jpg",
+          "commented": "Love you fairies"
+        },
+        {
+          "commentor": "Flynn",
+          "comment_avatar": "assets/img/avatar/Flynn.jpg",
+          "commented": "I like it"
+        },
+        {
+          "commentor": "TinkerBell",
+          "comment_avatar": "assets/img/avatar/TinkerBell.jpg",
+          "commented": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "Flynn Rider",
+      "avatar": "assets/img/avatar/Flynn.jpg",
+      "post_image": "",
+      "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo",
+      "likes": 50,
+      "noOfComments": "3",
+      "comments": [
+        {
+          "commentor": "Elsa",
+          "comment_avatar": "assets/img/avatar/Elsa.jpg",
+          "commented": "Wow!!!. Thats super"
+        },
+        {
+          "commentor": "Flynn",
+          "comment_avatar": "assets/img/avatar/Flynn.jpg",
+          "commented": "Great Buddy"
+        },
+        {
+          "commentor": "TinkerBell",
+          "comment_avatar": "assets/img/avatar/TinkerBell.jpg",
+          "commented": "Congrats"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "username": "Elsa",
+      "avatar": "assets/img/avatar/Elsa.jpg",
+      "post_image": "assets/img/posts/post2.jpg",
+      "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "likes": 45,
+      "noOfComments": "3",
+      "comments": [
+        {
+          "commentor": "Elsa",
+          "comment_avatar": "assets/img/avatar/Elsa.jpg",
+          "commented": "Beauty all around"
+        },
+        {
+          "commentor": "Flynn",
+          "comment_avatar": "assets/img/avatar/Flynn.jpg",
+          "commented": "I love you too olaf"
+        },
+        {
+          "commentor": "TinkerBell",
+          "comment_avatar": "assets/img/avatar/TinkerBell.jpg",
+          "commented": "Enjoying!!!"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "username": "Repunzel",
+      "avatar": "assets/img/avatar/TinkerBell.jpg",
+      "post_image": "assets/img/posts/post1.jpg",
+      "post_content": "Lot and lot of text should come here. And if the text exits for more than one line we have to navigate with ellipsis",
+      "likes": 20,
+      "noOfComments": "3",
+      "comments": [
+        {
+          "commentor": "Elsa",
+          "comment_avatar": "assets/img/avatar/Elsa.jpg",
+          "commented": "Started to maintain my hair"
+        },
+        {
+          "commentor": "Flynn",
+          "comment_avatar": "assets/img/avatar/Flynn.jpg",
+          "commented": "Nice movie"
+        },
+        {
+          "commentor": "TinkerBell",
+          "comment_avatar": "assets/img/avatar/TinkerBell.jpg",
+          "commented": "Beauty"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "username": "Flynn Rider",
+      "avatar": "assets/img/avatar/Flynn.jpg",
+      "post_image": "assets/img/posts/post2.jpg",
+      "post_content": "Lot and lot of text should come here. And if the text exits for more than one line we have to navigate with ellipsis",
+      "likes": 100,
+      "noOfComments": "3",
+      "comments": [
+        {
+          "commentor": "Elsa",
+          "comment_avatar": "assets/img/avatar/Elsa.jpg",
+          "commented": "Wow!!!. Thats super"
+        },
+        {
+          "commentor": "Flynn",
+          "comment_avatar": "assets/img/avatar/Flynn.jpg",
+          "commented": "Great Buddy"
+        },
+        {
+          "commentor": "TinkerBell",
+          "comment_avatar": "assets/img/avatar/TinkerBell.jpg",
+          "commented": "Congrats"
+        }
+      ]
+    }
+  ],
+  "photos": [
+    {
+      "img": "assets/img/posts/p2.jpg"
+    },
+    {
+      "img": "assets/img/posts/p4.jpg"
+    },
+    {
+      "img": "assets/img/posts/p2.jpg"
+    },
+    {
+      "img": "assets/img/posts/p4.jpg"
+    },
+    {
+      "img": "assets/img/posts/p2.jpg"
+    },
+    {
+      "img": "assets/img/posts/p4.jpg"
+    },
+    {
+      "img": "assets/img/posts/p2.jpg"
+    },
+    {
+      "img": "assets/img/posts/p4.jpg"
+    },
+    {
+      "img": "assets/img/posts/p2.jpg"
+    },
+    {
+      "img": "assets/img/posts/p4.jpg"
+    },
+    {
+      "img": "assets/img/posts/p2.jpg"
+    },
+    {
+      "img": "assets/img/posts/p4.jpg"
+    },
+    {
+      "img": "assets/img/posts/p2.jpg"
+    },
+    {
+      "img": "assets/img/posts/p4.jpg"
+    },
+    {
+      "img": "assets/img/posts/p2.jpg"
+    },
+    {
+      "img": "assets/img/posts/p4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+// .csi{
+//   background: darken(map-get($colors, light), 2);
+// }
+
+// .all-buttons{
+//   button{
+//     margin-right: 3px;
+//   }
+// }
+
+.center_span {
+  display:table;
+  margin:0 auto;
+  }
+
+.range {
+  // https://codepen.io/mhartington/pen/ELcwg
+  // -ms-transform: rotate(-90deg); /* IE 9 */
+  // -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  // transform: rotate(-90deg);
+
+  // https://jsfiddle.net/rwaldron/XukVc/
+  -webkit-appearance: slider-vertical;
+  width: 20px;
+  height: 200px;
+}
+
+.complete {
+  float: right;
+}

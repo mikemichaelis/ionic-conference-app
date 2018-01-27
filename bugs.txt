@@ -1,0 +1,10 @@
+Mobile login, <no saved auth> fix flow
+
+// Allow make and manage phone calls UniqueDeviceID plugin
+https://github.com/googleanalytics/google-analytics-plugin-for-unity/issues/129
+
+no network
+make edits save local
+network up
+don't allow new downloads to overwrite previous edits (conflicts)
+automatically push local changes to api

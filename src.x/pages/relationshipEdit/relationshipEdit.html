@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+          <span *ngIf="edit">{{ 'relationship-edit.edit' | translate }}</span>
+          <span *ngIf="!edit">{{ 'relationship-edit.create' | translate }}</span>
+        </ion-title>
+        <ion-buttons start>
+          <button ion-button (click)="dismiss()">
+            <span ion-text color="primary" showWhen="ios,core,mobileweb">Cancel</span>
+            <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="profile-images">
+    <img class="profile-cover" data-src="{{relationship.background_url}}" (click)="selectImage('background')" tappabble>
+    <div class="profile-details">
+        <div class="profile-area-photo">
+            <img class="profile-photo" data-src="{{relationship.picture_url}}" (click)="selectImage('profile')" tappabble>
+        </div>
+        <div class="profile-area-username">
+            <h1 class="profile-name" text-center>{{relationship.name}}</h1>
+        </div>
+        <!-- <ion-grid class="profile-data">
+            <ion-row>
+                <ion-col col-4 justify-content-center>
+                    <ion-row>
+                        <ion-col text-center class="number data-number">
+                            {{relationship.start | date:'shortDate'}}
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col text-center class="number data-head">
+                            Start
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+              </ion-row>
+          </ion-grid> -->
+    </div>
+  </div>
+
+  <div class="other-content">
+
+      <form [formGroup]="form" novalidate>
+          <ion-list>
+
+                <ion-item>
+                    <ion-label floating>{{ 'relationship-edit.name' | translate }}</ion-label>
+                    <ion-input type="text" formControlName="name"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label stacked>{{ 'relationship-edit.type' | translate }}</ion-label>
+                    <ion-select formControlName="type" interface="action-sheet">
+                        <ion-option *ngFor="let t of rel_types" [value]="t">{{ getRelationshipType(t) }}</ion-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label stacked>{{ 'relationship-edit.start-date' | translate }}</ion-label>
+                    <ion-datetime displayFormat="MMM DD YYYY" formControlName="start"></ion-datetime>
+
+                    <!-- <ion-input type="date" formControlName="start"></ion-input> -->
+                </ion-item>
+
+                <ion-item>
+                    <button ion-button class="image-picker-button" (click)="selectImage('profile')"> {{ 'relationship-edit.select-profile' | translate }}</button>
+                </ion-item>
+
+                <ion-item>
+                    <button ion-button class="image-picker-button"  (click)="selectImage('background')">{{ 'relationship-edit.select-background' | translate }}</button>
+                </ion-item>
+          </ion-list>
+      </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+    <ion-grid>
+        <ion-row no-padding no-margin>
+            <ion-col col-4 no-padding>
+
+            </ion-col>
+            <ion-col col-4 no-padding>
+                <button ion-button round [disabled]='this.form.invalid' (click)="save()">{{ 'relationship-edit.save' | translate }}</button>
+            </ion-col>
+            <ion-col col-4 no-padding>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+  </ion-footer>
+
+

@@ -1,0 +1,15 @@
+{
+  "profile": [
+    {
+      "id": "5",
+      "username": "TinkerBell",
+      "avatar": "assets/img/avatar/TinkerBell.jpg",
+      "cover":"assets/img/posts/cover2.jpg",
+      "location":"India",
+      "following":"3",
+      "followers":"3",
+      "posts": "100",
+      "photos": "3"
+    }
+  ]
+}

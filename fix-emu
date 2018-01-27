@@ -1,0 +1,7 @@
+rm ~/.android/adb*
+adb kill-server
+adb kill-server
+adb kill-server
+adb start-server
+
+ionic cordova run android -l

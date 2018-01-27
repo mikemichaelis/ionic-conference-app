@@ -1,0 +1,64 @@
+.timeline-detail{
+  .username{
+    color: map-get($colors, primary);
+  }
+  .item{
+    padding-left: 0;
+  }
+  .top-icons{
+    margin: 0 !important;
+    ion-icon{
+      float: right;
+      color: map-get($colors, primary);
+    }
+  }
+  .detail-image img{
+    width: 100%;
+  }
+  .detail-para{
+    text-align: justify;
+    text-indent: 10px;
+    margin-top: 5px;
+  }
+  .other-comment{
+    margin-bottom: 10px;
+    .item-block:last-child{
+      border-bottom-style:none ;
+    }
+    .item-block:last-child .item-inner{
+      border-bottom: 0.55px solid #c8c7cc !important;
+    }
+  }
+  .comment-heading{
+    color: map-get($colors, primary);
+    font-variant: small-caps;
+  }
+  .comment-avatar{
+    align-self: baseline;
+  }
+  .comments{
+   white-space: initial;
+  }
+  .notes{
+    font-size: 1.2rem;
+    .link{
+      color: #6767a1;
+    }
+  }
+  .user-comment{
+    border-style: none !important;
+    margin-bottom: 10px;
+    .comment-area{
+     border: 1px solid #c8c7cc;
+      margin-right: 3px;
+    }
+    .add-button{
+      margin-right: -6px;
+      align-self: flex-end;
+    }
+  }
+}
+.user-comment-list.list-md .item-input.input-has-focus:last-child{
+   border-bottom-color: transparent;
+  box-shadow: inset 0 -1px 0 0 transparent;
+ }

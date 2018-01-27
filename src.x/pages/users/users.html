@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Following</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let user of users" (click)="openProfile(user)">
+      <ion-avatar item-left>
+        <img [src]="user.avatar">
+      </ion-avatar>
+      <h2 class="username">{{user.username}}</h2>
+      <h3>@ {{user.location}}</h3>
+      <ion-note item-right *ngIf="user.myFollower == 'false'">
+        <button ion-button outline small>Follow</button>
+      </ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

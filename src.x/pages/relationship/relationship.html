@@ -1,0 +1,113 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <!-- <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button> -->
+        <ion-title>{{ 'relationship.title' | translate }}</ion-title>
+        <ion-buttons end>
+                <button ion-button icon-only (click)="relationshipSettings()"><ion-icon name="settings"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!-- <ion-tabs>
+        <ion-tabs>
+            <ion-tab [root]="page" tabTitle="Home" tabIcon="home"></ion-tab>
+            <ion-tab [root]="page" tabTitle="Timeline" tabIcon="book"></ion-tab>
+            <ion-tab [root]="page" tabTitle="Chat" tabIcon="chat"></ion-tab>
+        </ion-tabs>
+      </ion-tabs> -->
+    <div class="profile-images">
+        <img class="profile-cover" data-src="{{relationship.background_url}}">
+        <div class="profile-details">
+            <div class="profile-area-photo">
+                <img class="profile-photo" data-src="{{relationship.picture_url}}">
+            </div>
+            <div class="profile-area-username">
+                <h1 class="profile-name" text-center>{{relationship.name}}</h1>
+            </div>
+            <ion-grid class="profile-data">
+                <ion-row>
+                    <ion-col col-4 justify-content-center>
+                        <ion-row>
+                            <ion-col text-center class="number data-number">
+                                {{ relationship.start | date:'shortDate' }}
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col text-center class="number data-head">
+                                {{ 'relationship.start' | translate }}
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+
+                    <ion-col col-4 push-4 justify-content-center>
+                        <ion-row>
+                            <ion-col text-center class="number data-number">
+                                {{ relationship.days }}
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col text-center class="number data-head">
+                                Days
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+
+
+    <!--
+        Relationship
+            Customization (name/picture)
+            Pictures
+            Dates
+            Events (birthdays)
+            Notes
+            Days
+            Sex
+            Chat
+            Block Relationship
+            End Relationship
+            Delete Relationship
+    -->
+    <!-- <div class="other-content"> -->
+
+        <!-- <form [formGroup]="form" novalidate>
+            <ion-list>
+
+                <ion-item>
+                    <ion-label floating>{{ 'relationship.name' | translate }}</ion-label>
+                    <ion-input type="text" formControlName="name"></ion-input>
+                </ion-item> -->
+
+                <!-- <ion-item>
+                    <ion-label floating>Nickname</ion-label>
+                    <ion-input type="text" formControlName="nickname"></ion-input>
+                </ion-item> -->
+
+                <!-- <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input type="text" formControlName="email"></ion-input>
+                </ion-item>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-label>Language</ion-label>
+                        <ion-select formControlName="locale">
+                                <ion-option *ngFor="let locale of locales" [value]="locale">{{locale}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list> -->
+            <!-- </ion-list>
+        </form> -->
+    <!-- </div> -->
+
+    <!-- <p>Form value: {{ form.value | json }}</p> -->
+
+</ion-content>
+
+

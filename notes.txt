@@ -1,0 +1,21 @@
+http://plnkr.co/edit/me3Uk0GKWVRhZWU0usad?p=preview
+// Ionic 2 test plunker
+
+https://forum.ionicframework.com/t/display-image/59174/10
+
+Note this fix was applied and may need to be removed
+https://github.com/ionic-team/ionic-cli/issues/2922
+
+
+node v6.11.2
+npm v3.10.10
+
+This application will be a blockbuster for girls performing a dating service.1
+Girls list themselves online and allow entry into a 'relationship' to attract customers,
+    keep track of events, communication, dates, gifts, dates
+    communication is via chat and is auto translatable as an add online
+    photos taken and sent to partners with a timeout period
+    interaction via ar avitars to play and have sex
+
+
+

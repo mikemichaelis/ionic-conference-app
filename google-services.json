@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "536832611769",
+    "firebase_url": "https://reflectionship-999999.firebaseio.com",
+    "project_id": "reflectionship-999999",
+    "storage_bucket": "reflectionship-999999.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536832611769:android:147f1f213a260e8c",
+        "android_client_info": {
+          "package_name": "com.reflectionship.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536832611769-ek02cfcjkvth50v5ua9hats3tkc0cboc.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "536832611769-tkp8taojnq6bmehnemln8ju9tsv141ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXWgIoVV0QCghkRGI4MZSq0IJFc5av6P0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

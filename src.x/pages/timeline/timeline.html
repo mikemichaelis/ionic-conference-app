@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Timeline</ion-title>
+        <ion-buttons end class="all-buttons">
+            <button ion-button clear (click)="openNotifications()">
+                <ion-icon name="notifications">
+                    <ion-badge class="badging">5</ion-badge>
+                </ion-icon>
+            </button>
+            <button ion-button clear (click)="search()">
+                <ion-icon name="search"></ion-icon>
+            </button>
+            <button ion-button clear (click)="viewMyProfile()">
+                <ion-icon name="person"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="timeline">
+    <div *ngFor="let timeline of timelines">
+        <my-timeline [data]="timeline"></my-timeline>
+    </div>
+</ion-content>

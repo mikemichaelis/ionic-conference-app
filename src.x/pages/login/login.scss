@@ -1,0 +1,125 @@
+
+
+.home-container {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+
+.home-container > .row {
+  -webkit-flex: 1;
+}
+
+.header {
+  -webkit-flex: 1.5 !important;
+  -webkit-align-items: center;
+  background-color: #1abc9c;
+}
+
+.icon-row {
+  -webkit-align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.login-button {
+  width:325px;
+  height:40px;
+  // background:lightblue;
+  // color: black;
+}
+
+.title {
+  font-size: 50px;
+  color: lightblue;
+}
+
+.login {
+
+
+  background: url($mybg) center center/cover no-repeat;
+  .background-image {
+    background: url($mybg) center center/cover no-repeat;
+    opacity: 0.3;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  .centerContent {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .showIcon {
+    @extend .centerContent;
+    top: 40%;
+    width: 15%;
+    @media (orientation: Landscape) {
+      width: 10%;
+    }
+  }
+
+  .showTitle {
+    @extend .centerContent;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: cursive;
+    font-variant: small-caps;
+    @media (orientation: Landscape){
+      top: 55%;
+    }
+  }
+
+  .hideIcon {
+    @extend .showIcon;
+    top: 10%;
+    @media (orientation: Landscape){
+      width: 5%;
+    }
+  }
+
+  .hideTitle{
+    display: none;
+  }
+
+}
+
+.login-footer {
+  .toolbar-background {
+    background: transparent;
+    border-style: none;
+  }
+  ion-row {
+    margin-bottom: 1rem;
+  }
+  ion-col:first-child {
+    border-right: thin solid white;
+  }
+  .sign-head {
+    color: gainsboro;
+    text-align: center;
+    font-variant: small-caps;
+    margin-top: 0;
+  }
+  .sign-subhead {
+    color: #a7a6a6;
+    text-align: center;
+  }
+  .showCol{
+    display: block;
+  }
+  .hideCol{
+    display: none;
+  }
+}
+

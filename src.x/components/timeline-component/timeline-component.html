@@ -1,0 +1,41 @@
+<ion-card>
+    <ion-card-header class="timeline-header">
+        <ion-item>
+            <ion-avatar item-left>
+                <img data-src="{{data.avatar}}">
+            </ion-avatar>
+            <h2 class="username">{{data.username}}</h2>
+            <p class="timing">December 14, 6.50PM</p>
+            <ion-avatar item-right (click)="like(data)">
+                <ion-icon class="like-icon" [name]="data.liked ? 'heart' : 'ios-heart-outline'"></ion-icon>
+            </ion-avatar>
+        </ion-item>
+    </ion-card-header>
+    <ion-card-content class="timeline-content" (click)="moreDetails(data)">
+        <div  *ngIf="data.post_image !== ''">
+            <img [src]="data.post_image">
+        </div>
+        <p *ngIf="data.post_content !== ''">{{data.post_content}}</p>
+    </ion-card-content>
+    <ion-card-header class="timeline-footer">
+        <ion-row>
+            <ion-col col-4 justify-content-center>
+                <button ion-button clear>
+                    <ion-icon name="heart"></ion-icon>
+                    {{data.likes}} Liked
+                </button>
+            </ion-col>
+            <ion-col justify-content-center>
+                <button ion-button clear (click)="moreDetails(data)">
+                    <ion-icon name="cloud-outline"></ion-icon>
+                    {{data.noOfComments}} Comments
+                </button>
+            </ion-col>
+            <ion-col col-2 justify-content-center>
+                <button ion-button clear>
+                    <ion-icon name="share"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card-header>
+</ion-card>

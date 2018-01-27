@@ -1,0 +1,71 @@
+{
+    "shared": {
+        "title": "Reflectionship"
+    },
+    "system": {
+        "error-notification": "An error has occurred"
+    },
+    "login": {
+        "sign_in": "Sign In",
+        "sign_in_help": "Sign in to create a new account or log in with Facebook, Google, or an existing Reflectionship account."
+    },
+    "home": {
+    },
+    "settings": {
+        "title": "Settings",
+        "general": "General",
+        "select-profile": "Select Profile Picture",
+        "clear-local-data": "Clear Local Data",
+        "notifications": "Notifications",
+        "allow-push": "Allow Push Notifications",
+        "play-sound": "Play Sound on Notifications"
+    },
+    "menu": {
+        "home": "Home",
+        "timeline": "Timeline",
+        "profile": "Profile",
+        "relationships": "Relationships",
+        "notifications": "Notifications",
+        "settings": "Settings",
+        "logout": "Logout"
+    },
+    "relationship": {
+        "title": "Relationship Home",
+        "start": "Start",
+        "name": "Name"
+    },
+    "relationships": {
+        "title": "Relationships",
+        "add": "Add Relationship",
+        "timeline": "timeline",
+        "chat": "chat",
+        "stats": "stats",
+        "settings": "settings",
+        "edit": "edit"
+    },
+    "relationship-edit": {
+        "name": "Name",
+        "type": "Relationship Type",
+        "start-date": "Start Date",
+        "select-profile": "Select Profile Picture",
+        "select-background": "Select Background Image",
+        "edit": "Edit Relationship",
+        "create": "Create Relationship",
+        "save": "Save Relationship",
+        "saved": "Relationship saved",
+        "created": "Relationship created"
+    },
+    "relationship-types": {
+        "DATING": "DATING",
+        "FLIRT": "FLIRT",
+        "FRIEND": "FRIEND",
+        "LOVER": "LOVER",
+        "MARRIAGE": "MARRIAGE",
+        "PLATONIC": "PLATONIC",
+        "ROMANTIC": "ROMANTIC",
+        "SELF": "SELF",
+        "SEXUAL": "SEXUAL",
+        "XXX": "XXX"
+    }
+
+}

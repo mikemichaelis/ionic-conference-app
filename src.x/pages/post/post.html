@@ -1,0 +1,36 @@
+<ion-header class="post-toolbar" no-border no-shadow>
+    <ion-toolbar>
+        <button ion-fab class="close-button" (click)="closeModal()">
+            <ion-icon name="close"></ion-icon>
+        </button>
+        <ion-title text-left>
+            <ion-icon name="add"></ion-icon>
+            Add Post
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="post-content">
+    <div class="upload-image">
+        <ion-icon name="camera" class="show-camera"> <ion-badge class="plus-on-icon"> <ion-icon name="add"></ion-icon> </ion-badge> </ion-icon>
+    </div>
+    <ion-list class="post-title">
+        <ion-item>
+            <ion-input type="text" placeholder="Add Title..." clearInput></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <ion-list class="post-text">
+        <ion-item>
+            <ion-textarea type="text" placeholder="Say something about this..."></ion-textarea>
+        </ion-item>
+    </ion-list>
+
+</ion-content>
+
+<ion-footer class="post-toolbar" no-border no-shadow>
+    <ion-toolbar>
+        <button ion-button block class="post-button" (click)="post()">Post</button>
+    </ion-toolbar>
+</ion-footer>

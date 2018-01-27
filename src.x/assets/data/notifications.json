@@ -1,0 +1,94 @@
+{
+  "notifications": [
+    {
+      "day": "today",
+      "posts": [
+        {
+          "name": "Elsa",
+          "avatar": "assets/img/avatar/Elsa.jpg",
+          "post": "commented on your post"
+        },
+        {
+          "name": "TinkerBell",
+          "avatar": "assets/img/avatar/TinkerBell.jpg",
+          "post": "added a photo of you"
+        },
+        {
+          "name": "Flynn",
+          "avatar": "assets/img/avatar/Flynn.jpg",
+          "post": "likes your post"
+        },
+        {
+          "name": "Elsa",
+          "avatar": "assets/img/avatar/Elsa.jpg",
+          "post": "shares a event"
+        },
+        {
+          "name": "TinkerBell",
+          "avatar": "assets/img/avatar/TinkerBell.jpg",
+          "post": "follows Flynn now"
+        }
+      ]
+    },
+    {
+      "day": "Yesterday",
+      "posts": [
+        {
+          "name": "Elsa",
+          "avatar": "assets/img/avatar/Elsa.jpg",
+          "post": "commented on your post"
+        },
+        {
+          "name": "TinkerBell",
+          "avatar": "assets/img/avatar/TinkerBell.jpg",
+          "post": "added a photo of you"
+        },
+        {
+          "name": "Flynn",
+          "avatar": "assets/img/avatar/Flynn.jpg",
+          "post": "likes your post"
+        },
+        {
+          "name": "Elsa",
+          "avatar": "assets/img/avatar/Elsa.jpg",
+          "post": "shares a event"
+        },
+        {
+          "name": "TinkerBell",
+          "avatar": "assets/img/avatar/TinkerBell.jpg",
+          "post": "follows Flynn now"
+        }
+      ]
+    },
+    {
+      "day": "Sunday, Dec 19th,2016 ",
+      "posts": [
+        {
+          "name": "Elsa",
+          "avatar": "assets/img/avatar/Elsa.jpg",
+          "post": "commented on your post"
+        },
+        {
+          "name": "TinkerBell",
+          "avatar": "assets/img/avatar/TinkerBell.jpg",
+          "post": "added a photo of you"
+        },
+        {
+          "name": "Flynn",
+          "avatar": "assets/img/avatar/Flynn.jpg",
+          "post": "likes your post"
+        },
+        {
+          "name": "Elsa",
+          "avatar": "assets/img/avatar/Elsa.jpg",
+          "post": "shares a event"
+        },
+        {
+          "name": "TinkerBell",
+          "avatar": "assets/img/avatar/TinkerBell.jpg",
+          "post": "follows Flynn now"
+        }
+      ]
+    }
+  ]
+}

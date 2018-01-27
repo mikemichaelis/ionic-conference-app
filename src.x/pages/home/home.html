@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Home Page</ion-title>
+        <ion-buttons end class="all-buttons">
+            <button ion-button clear (click)="openNotifications()">
+                <ion-icon name="notifications">
+                    <ion-badge class="badging">5</ion-badge>
+                </ion-icon>
+            </button>
+            <button ion-button clear (click)="search()">
+                <ion-icon name="search"></ion-icon>
+            </button>
+            <button ion-button clear (click)="viewMyProfile()">
+                <ion-icon name="person"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <button ion-button (click)="goToCSI()">CSI Test</button>
+    <button ion-button (click)="getImage()">Picture</button>
+
+    <div>
+        <nvd3 [options]="options" [data]="data"></nvd3>
+    </div>
+
+<ion-content>
+
+<ion-footer class="home-footer" no-border no-shadow>
+    <ion-toolbar>
+        <ion-row>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

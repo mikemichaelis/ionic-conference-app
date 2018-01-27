@@ -1,0 +1,13 @@
+{
+    "login": {
+        "title": "ความสัมพันธ์",
+        "sign_up": "ลงชื่อ",
+        "sign_in": "ลงชื่อเข้าใช้",
+        "get_started": "เริ่ม",
+        "existing_account": "บัญชีที่มีอยู่"
+    },
+    "segment": {
+        "puppies": "ลูกสุนัข",
+        "kittens": "ลูกแมว"
+    }
+}

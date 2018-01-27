@@ -1,0 +1,193 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>My Profile</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="openNotifications()">
+                <ion-icon name="notifications">
+                    <ion-badge class="badging">5</ion-badge>
+                </ion-icon>
+            </button>
+            <button ion-button clear *ngIf="allowPost == true" (click)="addPost()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content #content elastic-profile>
+    <div class="profile-images">
+        <img class="profile-cover" data-src="{{profile.cover}}">
+        <div class="profile-details">
+            <div class="profile-area-photo">
+                <img class="profile-photo" data-src="{{profile.avatar}}">
+            </div>
+            <div class="profile-area-username">
+                <h1 class="profile-name" text-center>{{profile.username}}</h1>
+            </div>
+            <ion-grid class="profile-data">
+                <ion-row>
+                    <ion-col col-4 justify-content-center (click)="getFollowing()">
+                        <ion-row>
+                            <ion-col text-center class="number data-number">
+                                {{profile.following}}
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col text-center class="number data-head">
+                                Relationships
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+
+                    <!-- <ion-col col-4 push-4 justify-content-center (click)="getFollowers()">
+                        <ion-row>
+                            <ion-col text-center class="number data-number">
+                                {{profile.followers}}
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col text-center class="number data-head">
+                                Followers
+                            </ion-col>
+                        </ion-row>
+                    </ion-col> -->
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+
+    <div class="other-content">
+
+        <form [formGroup]="profileForm" novalidate>
+            <ion-list>
+
+                <ion-item>
+                    <ion-label floating>Name</ion-label>
+                    <ion-input type="text" formControlName="nickname"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input type="text" formControlName="email"></ion-input>
+                </ion-item>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-label>Language</ion-label>
+                        <ion-select formControlName="locale">
+                                <ion-option *ngFor="let locale of locales" [value]="locale">{{locale}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+
+                <ion-list>
+                    <ion-item>
+                            <ion-label>Gender</ion-label>
+                        <ion-select formControlName="gender">
+                                <ion-option *ngFor="let gender of genders" [value]="gender">{{gender}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-label>Sexual Orientation</ion-label>
+                        <ion-select formControlName="orientation">
+                                <ion-option *ngFor="let orientation of orientations" [value]="orientation">{{orientation}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-label>Theme</ion-label>
+                        <ion-select formControlName="theme">
+                            <ion-option *ngFor="let theme of themes" [value]="theme.id">{{theme.name}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+
+                <ion-item>
+                    <ion-label>
+                        <ion-icon item-left name="notifications" color="primary"></ion-icon>
+                        Allow Push Notifications
+                    </ion-label>
+                    <ion-toggle color="secondary" formControlName="push"></ion-toggle>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>
+                        <ion-icon item-left name="musical-note" color="primary"></ion-icon>
+                        Play Sound on Notifications
+                    </ion-label>
+                    <ion-toggle color="secondary" formControlName="logout"></ion-toggle>
+                </ion-item>
+
+                <!-- <ion-item>
+                    <ion-label>Logout on Application Exit</ion-label>
+                    <ion-checkbox color="dark" formControlName="logout"></ion-checkbox>
+                </ion-item> -->
+            </ion-list>
+        </form>
+
+        <!-- <input class="form-control" [formControl]="name"> -->
+
+        <!--
+        nicname: string;
+        locale: string;
+        email: string;
+
+        gender: string;
+        orientation
+
+        Relationships
+
+        picture_url: string;
+        backgroud_url: string
+        theme:
+
+        logout
+
+        push notifications
+        logout on exit -->
+
+        <!-- <ion-segment padding class="profile-segment" [(ngModel)]="show">
+            <ion-segment-button value="posts">
+                Posts
+            </ion-segment-button>
+            <ion-segment-button value="photos">
+                Photos
+            </ion-segment-button>
+        </ion-segment> -->
+
+        <!-- <div [ngSwitch]="show">
+            <div *ngSwitchCase="'posts'">
+                <div *ngFor="let post of posts">
+                    <my-timeline [data]="post"></my-timeline>
+                </div>
+            </div>
+            <div *ngSwitchCase="'photos'">
+                <ion-grid class="display-photos">
+                    <ion-row>
+                        <ion-col *ngFor="let photo of photos">
+                            <img data-src="{{photo.img}}">
+
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div> -->
+    </div>
+<!--
+    <p>Form value: {{ profileForm.value | json }}</p>
+    <p>Form status: {{ profileForm.status | json }}</p> -->
+</ion-content>
+
+<!-- <ion-footer class="follow-footer" *ngIf="profile.myFollower == 'false'" no-border>
+    <ion-toolbar>
+        Follow
+    </ion-toolbar>
+</ion-footer> -->

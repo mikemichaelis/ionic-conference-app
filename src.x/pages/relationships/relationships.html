@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'relationships.title' | translate }}</ion-title>
+    <ion-buttons end>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let relationship of relationships; let i = index">
+      <ion-item (click)="relationshipSelect(relationship)" tappable>
+        <ion-avatar item-start>
+          <img src="{{relationship.picture_url}}">
+        </ion-avatar>
+        <h2>{{relationship.name}}</h2>
+        <ion-icon item-end name="notifications" color="primary">
+            <ion-badge class="badging">5</ion-badge>
+        </ion-icon>
+        <ion-icon item-end name="heart" color="secondary">
+            <!-- <ion-badge class="badging">2</ion-badge> -->
+        </ion-icon>
+<!--
+        <ion-badge item-end color="primary">5</ion-badge>
+        <ion-badge item-end color="secondary">2</ion-badge> -->
+        <!-- <ion-checkbox color="dark" checked="true"></ion-checkbox> -->
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="relationshipTimeline(relationship)">
+          <!-- <ion-icon name="list-box"></ion-icon> -->
+          <ion-icon name="book"></ion-icon>
+          {{ 'relationships.timeline' | translate }}
+          <ion-badge item-end color="dark">5</ion-badge>
+        </button>
+        <button ion-button color="secondary" (click)="relationshipChat(relationship)">
+          <ion-icon name="text"></ion-icon>
+          {{ 'relationships.chat' | translate }}
+          <ion-badge item-end color="dark">2</ion-badge>
+        </button>
+        <button ion-button color="light" (click)="relationshipStats(relationship)">
+          <ion-icon name="stats"></ion-icon>
+          {{ 'relationships.stats' | translate }}
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary" (click)="relationshipSettings(relationship)">
+          <ion-icon name="settings"></ion-icon>
+          {{ 'relationships.settings' | translate }}
+        </button>
+
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row no-padding no-margin>
+      <ion-col col-4 no-padding>
+
+      </ion-col>
+      <ion-col col-4 no-padding>
+        <button ion-button round (click)="addRelationship()">{{ 'relationships.add' | translate }}</button>
+      </ion-col>
+      <ion-col col-4 no-padding>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-footer>

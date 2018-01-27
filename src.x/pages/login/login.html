@@ -1,0 +1,32 @@
+<ion-content scroll="false" class="login">
+    <ion-grid>
+        <ion-row justify-content-center>
+            <ion-col>
+                <div class="center">
+                    <!-- <img data-src="{{icon}}" style="width:100px"> -->
+                    <h1 class="title">{{ 'shared.title' | translate }}</h1>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col style="height: 1in">
+
+            </ion-col>
+        </ion-row>
+
+        <!-- <ion-row justify-content-center>
+            <ion-col>
+                <h2 class="center">{{ 'login.sign_in_help' | translate }}</h2>
+            </ion-col>
+        </ion-row> -->
+
+        <ion-row justify-content-center>
+            <ion-col>
+                <div class="center"> <!--  *ngIf="mobile"> -->
+                    <button ion-button class="login-button" (click)="signIn()"><span>{{ 'login.sign_in' | translate }}</span></button>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

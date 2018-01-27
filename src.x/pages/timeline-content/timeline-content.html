@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Details</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="timeline-detail">
+    <ion-item>
+        <ion-avatar item-left>
+            <img data-src="{{timeline.avatar}}">
+        </ion-avatar>
+        <h2 class="username">{{timeline.username}}</h2>
+        <p class="timing">December 14, 6.50PM</p>
+        <ion-avatar class="top-icons" item-right (click)="like(timeline)">
+            <ion-icon class="like-icon" [name]="timeline.liked ? 'heart' : 'ios-heart-outline'"></ion-icon>
+        </ion-avatar>
+        <ion-avatar class="top-icons"  item-right>
+            <ion-icon class="share-icon" name="share"></ion-icon>
+        </ion-avatar>
+    </ion-item>
+    <div class="detail-image" *ngIf="timeline.post_image != ''">
+        <img [src]="timeline.post_image">
+    </div>
+    <p *ngIf="timeline.post_content !== ''" class="detail-para">{{timeline.post_content}}</p>
+    <div>
+        <ion-icon style="color: red" name="heart"></ion-icon>
+        <span> {{timeline.likes}} Likes</span>
+        <span style="margin: 0 5px"></span>
+        <ion-icon color="primary" name="chatbubbles"></ion-icon>
+        <span> {{timeline.noOfComments}} Comments</span>
+    </div>
+    <h6 class="comment-heading"> Comments </h6>
+    <ion-list class="other-comment">
+        <ion-item *ngFor="let comment of timeline.comments">
+            <ion-avatar class="comment-avatar" item-left>
+                <img data-src="{{comment.comment_avatar}}">
+            </ion-avatar>
+            <h4 class="username"> {{comment.commentor}} </h4>
+            <h6 class="comments"> {{comment.commented}} </h6>
+            <ion-note class="notes"><span>3 hours ago . </span><span class="link">Like . </span><span><ion-icon color="primary" name="heart"> 2 . </ion-icon></span><span class="link">Reply</span></ion-note>
+        </ion-item>
+    </ion-list>
+    <ion-list class="user-comment-list">
+        <ion-item class="user-comment">
+            <ion-avatar item-left>
+                <img data-src="{{timeline.avatar}}">
+            </ion-avatar>
+            <ion-textarea class="comment-area" type="text" placeholder="Add your comment..."></ion-textarea>
+            <button ion-button item-right class="add-button">
+                Add
+            </button>
+        </ion-item>
+    </ion-list>
+
+
+
+</ion-content>

@@ -1,0 +1,9 @@
+.timeline{
+  background: darken(map-get($colors, light), 2);
+}
+
+.all-buttons{
+  button{
+    margin-right: 3px;
+  }
+}

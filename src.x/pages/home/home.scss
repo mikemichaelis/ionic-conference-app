@@ -1,0 +1,41 @@
+//@import '../../assets/css/nv.d3.css';
+
+.home{
+  background: darken(map-get($colors, light), 2);
+}
+
+.all-buttons{
+  button{
+    margin-right: 3px;
+  }
+}
+
+
+.home-footer {
+  .toolbar-background {
+    background: transparent;
+    border-style: none;
+  }
+  ion-row {
+    margin-bottom: 1rem;
+  }
+  ion-col:first-child {
+    border-right: thin solid white;
+  }
+  .sign-head {
+    color: gainsboro;
+    text-align: center;
+    font-variant: small-caps;
+    margin-top: 0;
+  }
+  .sign-subhead {
+    color: #a7a6a6;
+    text-align: center;
+  }
+  .showCol{
+    display: block;
+  }
+  .hideCol{
+    display: none;
+  }
+}
